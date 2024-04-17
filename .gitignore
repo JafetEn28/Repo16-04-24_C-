@@ -1,0 +1,71 @@
+.vsidx
+.suo
+# Ignorar archivos binarios generados
+*.exe
+*.dll
+*.pdb
+
+# Ignorar archivos de salida de compilación
+bin/
+obj/
+
+# Ignorar archivos generados por Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vsix
+*.builds
+
+# Ignorar archivos de resumen de código
+*.sln.docstates
+
+# Ignorar archivos de respaldo y caché
+*[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+*.pidb
+*.userprefs
+
+# Ignorar archivos de NuGet
+packages/
+*.nupkg
+*.pdb
+*.dll
+
+# Ignorar archivos de Visual Studio Code
+.vscode/
+
+# Ignorar archivos de Rider
+.idea/
+*.sln.iml
+
+# Ignorar archivos de macOS
+.DS_Store
+
+# Ignorar archivos de Linux
+*~
+
+
+# Ignorar archivos de compilación de Visual Studio Code
+.vscode/
