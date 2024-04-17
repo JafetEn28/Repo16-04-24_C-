@@ -49,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -66,7 +67,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
             this.txtPassword.Location = new System.Drawing.Point(61, 173);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -83,7 +84,7 @@
             this.txtCedula.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
             this.txtCedula.Location = new System.Drawing.Point(44, 4);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedula.Multiline = true;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(212, 30);
@@ -125,7 +126,7 @@
             this.chkTecnico.AutoSize = true;
             this.chkTecnico.BackColor = System.Drawing.Color.RoyalBlue;
             this.chkTecnico.Location = new System.Drawing.Point(169, 38);
-            this.chkTecnico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkTecnico.Margin = new System.Windows.Forms.Padding(2);
             this.chkTecnico.Name = "chkTecnico";
             this.chkTecnico.Size = new System.Drawing.Size(65, 17);
             this.chkTecnico.TabIndex = 22;
@@ -139,7 +140,7 @@
             this.chkAdmin.BackColor = System.Drawing.Color.RoyalBlue;
             this.chkAdmin.ForeColor = System.Drawing.Color.AliceBlue;
             this.chkAdmin.Location = new System.Drawing.Point(68, 38);
-            this.chkAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.chkAdmin.Name = "chkAdmin";
             this.chkAdmin.Size = new System.Drawing.Size(55, 17);
             this.chkAdmin.TabIndex = 21;
@@ -152,7 +153,7 @@
             this.checkBoxMostrar.AutoSize = true;
             this.checkBoxMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(179)))), ((int)(((byte)(182)))));
             this.checkBoxMostrar.Location = new System.Drawing.Point(215, 209);
-            this.checkBoxMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxMostrar.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxMostrar.Name = "checkBoxMostrar";
             this.checkBoxMostrar.Size = new System.Drawing.Size(64, 17);
             this.checkBoxMostrar.TabIndex = 20;
@@ -170,7 +171,7 @@
             this.button1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_encerrado_afuera_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(69, 239);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 43);
             this.button1.TabIndex = 15;
@@ -303,12 +304,22 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 24;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(549, 171);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "CRISTOPHER";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(823, 623);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
@@ -320,7 +331,7 @@
             this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
@@ -356,5 +367,6 @@
         private System.Windows.Forms.CheckBox chkTecnico;
         private System.Windows.Forms.CheckBox chkAdmin;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label8;
     }
 }
