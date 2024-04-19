@@ -17,7 +17,7 @@ namespace Proyecto_Final_PrograIV
         public MANUsuarios()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -253,11 +253,11 @@ namespace Proyecto_Final_PrograIV
             }
         }
 
-        
+
 
         private void MANUsuarios_Load_1(object sender, EventArgs e)
         {
-            
+
 
             // Establecer el estilo del ComboBox de puesto para que no permita la edición directa
             comboBoxPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -273,7 +273,7 @@ namespace Proyecto_Final_PrograIV
             comboBoxDepar.Items.Clear();
             comboBoxDepar.Items.AddRange(new string[] { "TI" });
 
-            
+
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -349,9 +349,8 @@ namespace Proyecto_Final_PrograIV
 
         private void btnActuUser_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
-   
-}
 
+}
