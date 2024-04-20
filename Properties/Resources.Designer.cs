@@ -284,16 +284,6 @@ namespace Proyecto_Final_PrograIV.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_conectar_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-conectar-32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_documento_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-documento-32", resourceCulture);
@@ -337,16 +327,6 @@ namespace Proyecto_Final_PrograIV.Properties {
         internal static System.Drawing.Bitmap icons8_ladrillos_de_puntos {
             get {
                 object obj = ResourceManager.GetObject("icons8-ladrillos-de-puntos", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_ver_archivo_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-ver-archivo-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

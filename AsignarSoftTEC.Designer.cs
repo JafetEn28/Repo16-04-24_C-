@@ -57,9 +57,10 @@
             "Laptop",
             "Telefono (mobil)",
             "Pc Escritorio"});
-            this.comboBox1.Location = new System.Drawing.Point(92, 254);
+            this.comboBox1.Location = new System.Drawing.Point(123, 313);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 33);
+            this.comboBox1.Size = new System.Drawing.Size(374, 40);
             this.comboBox1.TabIndex = 41;
             // 
             // label1
@@ -68,11 +69,12 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.label1.Location = new System.Drawing.Point(88, 217);
+            this.label1.Location = new System.Drawing.Point(117, 267);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 25);
+            this.label1.Size = new System.Drawing.Size(343, 32);
             this.label1.TabIndex = 40;
-            this.label1.Text = "Seleccione el tipo de Software:";
+            this.label1.Text = "Sleccione el tipo de Software:";
             // 
             // label3
             // 
@@ -80,9 +82,10 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(121)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(218, 9);
+            this.label3.Location = new System.Drawing.Point(291, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(353, 37);
+            this.label3.Size = new System.Drawing.Size(443, 46);
             this.label3.TabIndex = 39;
             this.label3.Text = "Asignar Software a Equipo";
             // 
@@ -94,9 +97,10 @@
             "Laptop",
             "Telefono (mobil)",
             "Pc Escritorio"});
-            this.comboBox2.Location = new System.Drawing.Point(405, 166);
+            this.comboBox2.Location = new System.Drawing.Point(540, 204);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(295, 33);
+            this.comboBox2.Size = new System.Drawing.Size(392, 40);
             this.comboBox2.TabIndex = 46;
             // 
             // label2
@@ -105,11 +109,12 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.label2.Location = new System.Drawing.Point(405, 123);
+            this.label2.Location = new System.Drawing.Point(540, 151);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 25);
+            this.label2.Size = new System.Drawing.Size(392, 32);
             this.label2.TabIndex = 45;
-            this.label2.Text = "Seleccione el nombre del Software:";
+            this.label2.Text = "Sleccione el nombre del Software:";
             // 
             // comboBox3
             // 
@@ -119,9 +124,10 @@
             "Laptop",
             "Telefono (mobil)",
             "Pc Escritorio"});
-            this.comboBox3.Location = new System.Drawing.Point(241, 337);
+            this.comboBox3.Location = new System.Drawing.Point(321, 415);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(286, 33);
+            this.comboBox3.Size = new System.Drawing.Size(380, 40);
             this.comboBox3.TabIndex = 48;
             // 
             // label4
@@ -130,9 +136,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.label4.Location = new System.Drawing.Point(284, 308);
+            this.label4.Location = new System.Drawing.Point(378, 379);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 25);
+            this.label4.Size = new System.Drawing.Size(252, 32);
             this.label4.TabIndex = 47;
             this.label4.Text = "Versión del software:";
             // 
@@ -144,9 +151,10 @@
             "Laptop",
             "Telefono (mobil)",
             "Pc Escritorio"});
-            this.comboBox4.Location = new System.Drawing.Point(405, 254);
+            this.comboBox4.Location = new System.Drawing.Point(540, 313);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(295, 33);
+            this.comboBox4.Size = new System.Drawing.Size(392, 40);
             this.comboBox4.TabIndex = 50;
             // 
             // label5
@@ -155,9 +163,10 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.label5.Location = new System.Drawing.Point(405, 217);
+            this.label5.Location = new System.Drawing.Point(540, 267);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(194, 25);
+            this.label5.Size = new System.Drawing.Size(247, 32);
             this.label5.TabIndex = 49;
             this.label5.Text = "Fecha de asignación:";
             // 
@@ -169,9 +178,10 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_add_bookmark_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(288, 392);
+            this.button1.Location = new System.Drawing.Point(384, 482);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 46);
+            this.button1.Size = new System.Drawing.Size(296, 57);
             this.button1.TabIndex = 51;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
@@ -182,9 +192,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.flecha_derecha;
-            this.button2.Location = new System.Drawing.Point(12, 9);
+            this.button2.Location = new System.Drawing.Point(16, 11);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 40);
+            this.button2.Size = new System.Drawing.Size(72, 49);
             this.button2.TabIndex = 43;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -192,9 +203,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Proyecto_Final_PrograIV.Properties.Resources.barraAzulBajo;
-            this.pictureBox3.Location = new System.Drawing.Point(0, -4);
+            this.pictureBox3.Location = new System.Drawing.Point(0, -5);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(814, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(1085, 76);
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
             // 
@@ -202,9 +214,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.pictureBox2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.FondoTECdese;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 28);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(814, 551);
+            this.pictureBox2.Size = new System.Drawing.Size(1085, 678);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
@@ -212,9 +225,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.barraAzulBajo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 569);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 700);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(814, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(1085, 70);
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
@@ -226,9 +240,10 @@
             "Laptop",
             "Telefono (mobil)",
             "Pc Escritorio"});
-            this.comboBox5.Location = new System.Drawing.Point(92, 166);
+            this.comboBox5.Location = new System.Drawing.Point(123, 204);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(282, 33);
+            this.comboBox5.Size = new System.Drawing.Size(374, 40);
             this.comboBox5.TabIndex = 52;
             // 
             // label6
@@ -237,17 +252,18 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.label6.Location = new System.Drawing.Point(88, 123);
+            this.label6.Location = new System.Drawing.Point(117, 151);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(268, 25);
+            this.label6.Size = new System.Drawing.Size(328, 32);
             this.label6.TabIndex = 53;
-            this.label6.Text = "Seleccione el id del Software:";
+            this.label6.Text = "Sleccione el id del Software:";
             // 
             // AsignarSoftTEC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 623);
+            this.ClientSize = new System.Drawing.Size(1085, 767);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.button1);
@@ -265,6 +281,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AsignarSoftTEC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AsignarSoftTEC";
