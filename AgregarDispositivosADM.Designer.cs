@@ -281,39 +281,11 @@
             this.button5.Text = "button3";
             this.button5.UseVisualStyleBackColor = true;
             // 
-<<<<<<< Updated upstream
-=======
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(535, 167);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Kixo Chuan";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(548, 133);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "UWU";
-            // 
->>>>>>> Stashed changes
             // AgregarDispositivosADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 623);
-<<<<<<< Updated upstream
-=======
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
->>>>>>> Stashed changes
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
