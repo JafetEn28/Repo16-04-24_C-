@@ -469,6 +469,11 @@ namespace Proyecto_Final_PrograIV
         {
             label_info.Text = "*";
         }
+
+        private void comboBoxDepar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -42,6 +42,7 @@
             this.txtApellido2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
             this.btnActuUser = new System.Windows.Forms.Button();
@@ -234,6 +235,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuarios";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(709, 197);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(21, 25);
+            this.label5.TabIndex = 78;
+            this.label5.Text = "*";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(67)))), ((int)(((byte)(191)))));
@@ -324,6 +337,7 @@
             this.comboBoxDepar.Name = "comboBoxDepar";
             this.comboBoxDepar.Size = new System.Drawing.Size(208, 33);
             this.comboBoxDepar.TabIndex = 66;
+            this.comboBoxDepar.SelectedIndexChanged += new System.EventHandler(this.comboBoxDepar_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -510,18 +524,6 @@
             this.label16.Size = new System.Drawing.Size(14, 17);
             this.label16.TabIndex = 77;
             this.label16.Text = "*";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(709, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 25);
-            this.label5.TabIndex = 78;
-            this.label5.Text = "*";
             // 
             // MANUsuarios
             // 
