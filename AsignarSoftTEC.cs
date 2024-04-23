@@ -71,12 +71,6 @@ namespace Proyecto_Final_PrograIV
             }
         }
 
-
-
-
-
-
-
         private void btnAsignar_Click(object sender, EventArgs e)
         {
 

@@ -97,6 +97,20 @@ namespace Proyecto_Final_PrograIV
             cbTipoEquipo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+
+        private void Limpiartxts()
+        {
+            txtId.Text = "";
+            txtMarca.Text = "";
+            txtModelo.Text = "";
+            txtPatrimonio.Text = "";
+            txtSerie.Text = "";
+            cbTipoEquipo.Items.Clear();
+            cbUsuario.Items.Clear();
+
+        }
+
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             if (CamposCompletos())
@@ -117,6 +131,10 @@ namespace Proyecto_Final_PrograIV
                     MessageBox.Show("Por favor, seleccione un tipo de equipo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+
+                Limpiartxts();
+
 
                 string serieCpu = txtSerie.Text;
                 string patrimonioCPU = txtPatrimonio.Text;

@@ -23,7 +23,7 @@ namespace Proyecto_Final_PrograIV
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        SqlConnection con = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;");
+        SqlConnection con = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;");
 
         public void Logear(string usuario, string contra)
         {

@@ -145,7 +145,7 @@ namespace Proyecto_Final_PrograIV
             string query = "SELECT * FROM Empleados";
 
             // Crear una nueva conexión utilizando la cadena de conexión
-            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra4;Integrated Security=True;"))
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;"))
             {
                 // Crear un SqlDataAdapter para ejecutar la consulta y llenar un DataTable
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);

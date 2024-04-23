@@ -88,7 +88,7 @@
             this.txtCedula.Size = new System.Drawing.Size(283, 37);
             this.txtCedula.TabIndex = 8;
             this.txtCedula.Text = "Digite su cédula";
-            this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
+            //this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
             this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
