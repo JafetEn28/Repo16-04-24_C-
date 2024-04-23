@@ -29,11 +29,21 @@
         private void InitializeComponent()
         {
             this.label3 = new System.Windows.Forms.Label();
+            this.dataEquipos = new System.Windows.Forms.DataGridView();
+            this.cbTipoReporte = new System.Windows.Forms.ComboBox();
+            this.cbTipoEquipo = new System.Windows.Forms.ComboBox();
             this.btnRep = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cbMarca = new System.Windows.Forms.ComboBox();
+            this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEquipos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -50,6 +60,35 @@
             this.label3.Size = new System.Drawing.Size(329, 37);
             this.label3.TabIndex = 45;
             this.label3.Text = "Generar Reporte Equipos";
+            // 
+            // dataEquipos
+            // 
+            this.dataEquipos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEquipos.Location = new System.Drawing.Point(101, 223);
+            this.dataEquipos.Name = "dataEquipos";
+            this.dataEquipos.ReadOnly = true;
+            this.dataEquipos.Size = new System.Drawing.Size(630, 250);
+            this.dataEquipos.TabIndex = 50;
+            this.dataEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEquipos_CellContentClick);
+            // 
+            // cbTipoReporte
+            // 
+            this.cbTipoReporte.FormattingEnabled = true;
+            this.cbTipoReporte.Location = new System.Drawing.Point(79, 93);
+            this.cbTipoReporte.Name = "cbTipoReporte";
+            this.cbTipoReporte.Size = new System.Drawing.Size(196, 21);
+            this.cbTipoReporte.TabIndex = 51;
+            this.cbTipoReporte.SelectedIndexChanged += new System.EventHandler(this.cbTipoReporte_SelectedIndexChanged);
+            // 
+            // cbTipoEquipo
+            // 
+            this.cbTipoEquipo.FormattingEnabled = true;
+            this.cbTipoEquipo.Location = new System.Drawing.Point(15, 165);
+            this.cbTipoEquipo.Name = "cbTipoEquipo";
+            this.cbTipoEquipo.Size = new System.Drawing.Size(121, 21);
+            this.cbTipoEquipo.TabIndex = 52;
+            this.cbTipoEquipo.SelectedIndexChanged += new System.EventHandler(this.cbTipoEquipo_SelectedIndexChanged);
             // 
             // btnRep
             // 
@@ -81,7 +120,7 @@
             this.pictureBox2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.Imagen2;
             this.pictureBox2.Location = new System.Drawing.Point(0, 59);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(788, 433);
+            this.pictureBox2.Size = new System.Drawing.Size(801, 433);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 47;
             this.pictureBox2.TabStop = false;
@@ -108,11 +147,79 @@
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
             // 
+            // cbMarca
+            // 
+            this.cbMarca.FormattingEnabled = true;
+            this.cbMarca.Location = new System.Drawing.Point(211, 165);
+            this.cbMarca.Name = "cbMarca";
+            this.cbMarca.Size = new System.Drawing.Size(121, 21);
+            this.cbMarca.TabIndex = 53;
+            this.cbMarca.SelectedIndexChanged += new System.EventHandler(this.cbMarca_SelectedIndexChanged);
+            // 
+            // cbDepartamento
+            // 
+            this.cbDepartamento.FormattingEnabled = true;
+            this.cbDepartamento.Location = new System.Drawing.Point(389, 165);
+            this.cbDepartamento.Name = "cbDepartamento";
+            this.cbDepartamento.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartamento.TabIndex = 54;
+            this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 15);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Tipo Equipo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(386, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 15);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Departamento:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(208, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Marca:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 15);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Seleccione el tipo de reporte:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
             // RepEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 546);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbDepartamento);
+            this.Controls.Add(this.cbMarca);
+            this.Controls.Add(this.cbTipoEquipo);
+            this.Controls.Add(this.cbTipoReporte);
+            this.Controls.Add(this.dataEquipos);
             this.Controls.Add(this.btnRep);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -122,6 +229,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RepEquipos";
             this.Text = "RepEquipos";
+            this.Load += new System.EventHandler(this.RepEquipos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataEquipos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -138,5 +247,14 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.DataGridView dataEquipos;
+        private System.Windows.Forms.ComboBox cbTipoReporte;
+        private System.Windows.Forms.ComboBox cbTipoEquipo;
+        private System.Windows.Forms.ComboBox cbMarca;
+        private System.Windows.Forms.ComboBox cbDepartamento;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

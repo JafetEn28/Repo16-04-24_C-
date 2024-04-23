@@ -50,5 +50,10 @@ namespace Proyecto_Final_PrograIV
                 nuevoFormPrincipal.Show();
             }
         }
+
+        private void AgregarSoftADM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

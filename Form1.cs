@@ -31,7 +31,7 @@ namespace Proyecto_Final_PrograIV
         {
             Clase_Conexion.Abrir_Conexion();
             DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM Empleados";
+            string consulta = "SELECT * FROM Personas";
             SqlCommand cmd = new SqlCommand(consulta, Clase_Conexion.Abrir_Conexion());
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(dt);

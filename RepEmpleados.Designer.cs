@@ -37,6 +37,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -47,10 +49,10 @@
             // 
             this.dataEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEmpleados.Location = new System.Drawing.Point(80, 213);
+            this.dataEmpleados.Location = new System.Drawing.Point(80, 280);
             this.dataEmpleados.Name = "dataEmpleados";
             this.dataEmpleados.ReadOnly = true;
-            this.dataEmpleados.Size = new System.Drawing.Size(591, 150);
+            this.dataEmpleados.Size = new System.Drawing.Size(591, 177);
             this.dataEmpleados.TabIndex = 49;
             this.dataEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEmpleados_CellContentClick);
             // 
@@ -58,9 +60,9 @@
             // 
             this.cbDepartamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartamentos.FormattingEnabled = true;
-            this.cbDepartamentos.Location = new System.Drawing.Point(310, 147);
+            this.cbDepartamentos.Location = new System.Drawing.Point(199, 198);
             this.cbDepartamentos.Name = "cbDepartamentos";
-            this.cbDepartamentos.Size = new System.Drawing.Size(139, 28);
+            this.cbDepartamentos.Size = new System.Drawing.Size(340, 28);
             this.cbDepartamentos.TabIndex = 48;
             this.cbDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbDepartamentos_SelectedIndexChanged);
             // 
@@ -68,7 +70,7 @@
             // 
             this.cbReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbReporte.FormattingEnabled = true;
-            this.cbReporte.Location = new System.Drawing.Point(206, 97);
+            this.cbReporte.Location = new System.Drawing.Point(199, 113);
             this.cbReporte.Name = "cbReporte";
             this.cbReporte.Size = new System.Drawing.Size(340, 28);
             this.cbReporte.TabIndex = 47;
@@ -147,11 +149,33 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(77, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 15);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Seleccione el tipo de reporte:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(77, 171);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 15);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Seleccione el Departamento:";
+            // 
             // RepEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 546);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataEmpleados);
             this.Controls.Add(this.btnRep);
             this.Controls.Add(this.cbDepartamentos);
@@ -185,5 +209,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label1;
     }
 }
