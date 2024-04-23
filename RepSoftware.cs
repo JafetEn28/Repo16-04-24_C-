@@ -19,7 +19,7 @@ namespace Proyecto_Final_PrograIV
         }
         private void LlenarComboBoxDesdeBaseDeDatos(string query, ComboBox comboBox)
         {
-            using (SqlConnection connection = new SqlConnection("SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true"))
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
             {
                 try
                 {
@@ -53,11 +53,11 @@ namespace Proyecto_Final_PrograIV
             dataSoftware.DataSource = null;
 
             // Conectar a la base de datos
-<<<<<<< Updated upstream
-            string connectionString = "SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true";
-=======
+
+            
+
             string connectionString = "Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;";
->>>>>>> Stashed changes
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -140,6 +140,12 @@ namespace Proyecto_Final_PrograIV
             LlenarComboBoxDesdeBaseDeDatos("SELECT modelo FROM Equipos", cbEquipos);
             // Llenar cbNombreSoftware
             LlenarComboBoxDesdeBaseDeDatos("SELECT Nombre_Software FROM Software", cbNombreSoftware);
+
+            // Deshabilitar la edición del ComboBox
+            cbTipoRepSoft.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbNombreSoftware.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEquipos.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTipoLicencia.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void cbTipoRepSoft_SelectedIndexChanged(object sender, EventArgs e)

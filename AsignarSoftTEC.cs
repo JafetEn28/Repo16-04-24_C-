@@ -113,7 +113,8 @@ namespace Proyecto_Final_PrograIV
 
         private void AsignarSoftTEC_Load(object sender, EventArgs e)
         {
-           
+            cbSoft.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEquipos.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void cbSoft_SelectedIndexChanged(object sender, EventArgs e)
@@ -221,5 +222,14 @@ namespace Proyecto_Final_PrograIV
             dgvSoft.DataSource = null; // Elimina cualquier origen de datos asignado al DataGridView dgvEmpleados
         }
 
+        private void dgvSoft_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvSoft.Dock = DockStyle.Fill;
+        }
+
+        private void dgvEquipo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvEquipo.Dock = DockStyle.Fill;
+        }
     }
 }

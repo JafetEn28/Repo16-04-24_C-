@@ -30,7 +30,7 @@ namespace Proyecto_Final_PrograIV
             dataEquipos.DataSource = null;
 
             // Conectar a la base de datos
-            string connectionString = "SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true";
+            string connectionString = "Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -113,6 +113,11 @@ namespace Proyecto_Final_PrograIV
             cbDepartamento.Items.Add("CONTABILIDAD");
             cbDepartamento.Items.Add("VENTAS");
             cbDepartamento.Items.Add("MARKETING");
+
+            cbTipoReporte.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbTipoReporte.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void cbTipoReporte_SelectedIndexChanged(object sender, EventArgs e)

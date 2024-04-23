@@ -189,7 +189,7 @@
             this.pictureBox2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.Imagen2;
             this.pictureBox2.Location = new System.Drawing.Point(0, 23);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(802, 551);
+            this.pictureBox2.Size = new System.Drawing.Size(814, 551);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;

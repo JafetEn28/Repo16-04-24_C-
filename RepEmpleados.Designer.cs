@@ -48,31 +48,32 @@
             // dataEmpleados
             // 
             this.dataEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataEmpleados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dataEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEmpleados.Location = new System.Drawing.Point(80, 280);
+            this.dataEmpleados.Location = new System.Drawing.Point(12, 349);
             this.dataEmpleados.Name = "dataEmpleados";
             this.dataEmpleados.ReadOnly = true;
-            this.dataEmpleados.Size = new System.Drawing.Size(591, 177);
+            this.dataEmpleados.Size = new System.Drawing.Size(790, 192);
             this.dataEmpleados.TabIndex = 49;
             this.dataEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEmpleados_CellContentClick);
             // 
             // cbDepartamentos
             // 
-            this.cbDepartamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDepartamentos.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbDepartamentos.FormattingEnabled = true;
-            this.cbDepartamentos.Location = new System.Drawing.Point(199, 198);
+            this.cbDepartamentos.Location = new System.Drawing.Point(229, 219);
             this.cbDepartamentos.Name = "cbDepartamentos";
-            this.cbDepartamentos.Size = new System.Drawing.Size(340, 28);
+            this.cbDepartamentos.Size = new System.Drawing.Size(340, 33);
             this.cbDepartamentos.TabIndex = 48;
             this.cbDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbDepartamentos_SelectedIndexChanged);
             // 
             // cbReporte
             // 
-            this.cbReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbReporte.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbReporte.FormattingEnabled = true;
-            this.cbReporte.Location = new System.Drawing.Point(199, 113);
+            this.cbReporte.Location = new System.Drawing.Point(229, 118);
             this.cbReporte.Name = "cbReporte";
-            this.cbReporte.Size = new System.Drawing.Size(340, 28);
+            this.cbReporte.Size = new System.Drawing.Size(340, 33);
             this.cbReporte.TabIndex = 47;
             this.cbReporte.SelectedIndexChanged += new System.EventHandler(this.cbReporte_SelectedIndexChanged);
             // 
@@ -97,9 +98,9 @@
             this.btnRep.ForeColor = System.Drawing.Color.White;
             this.btnRep.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_documento_32;
             this.btnRep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep.Location = new System.Drawing.Point(292, 489);
+            this.btnRep.Location = new System.Drawing.Point(286, 275);
             this.btnRep.Name = "btnRep";
-            this.btnRep.Size = new System.Drawing.Size(213, 46);
+            this.btnRep.Size = new System.Drawing.Size(242, 46);
             this.btnRep.TabIndex = 45;
             this.btnRep.Text = "Generar Reporte";
             this.btnRep.UseVisualStyleBackColor = false;
@@ -108,9 +109,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.barraAzulBajo;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 482);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 559);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(801, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(816, 65);
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -118,9 +119,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.Imagen2;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 62);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 53);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(801, 432);
+            this.pictureBox2.Size = new System.Drawing.Size(816, 508);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 44;
             this.pictureBox2.TabStop = false;
@@ -132,9 +133,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.flecha_derecha;
-            this.button2.Location = new System.Drawing.Point(10, 7);
+            this.button2.Location = new System.Drawing.Point(12, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 23);
+            this.button2.Size = new System.Drawing.Size(41, 35);
             this.button2.TabIndex = 43;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -142,9 +143,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Proyecto_Final_PrograIV.Properties.Resources.barraAzulBajo;
-            this.pictureBox3.Location = new System.Drawing.Point(-1, 1);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, -3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(789, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(816, 66);
             this.pictureBox3.TabIndex = 41;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -152,20 +153,24 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(77, 79);
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(220)))), ((int)(((byte)(225)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label5.Location = new System.Drawing.Point(265, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 15);
+            this.label5.Size = new System.Drawing.Size(266, 25);
             this.label5.TabIndex = 59;
             this.label5.Text = "Seleccione el tipo de reporte:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(77, 171);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(220)))), ((int)(((byte)(225)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label1.Location = new System.Drawing.Point(265, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 15);
+            this.label1.Size = new System.Drawing.Size(263, 25);
             this.label1.TabIndex = 60;
             this.label1.Text = "Seleccione el Departamento:";
             // 
@@ -173,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 546);
+            this.ClientSize = new System.Drawing.Size(814, 623);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataEmpleados);
@@ -187,6 +192,7 @@
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RepEmpleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RepEmpleados";
             this.Load += new System.EventHandler(this.RepEmpleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataEmpleados)).EndInit();

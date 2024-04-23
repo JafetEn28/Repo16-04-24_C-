@@ -223,7 +223,7 @@ namespace Proyecto_Final_PrograIV
                         {
                             MessageBox.Show("Inicio de sesión exitoso como " + tipoUsuario);
 
-
+                            
                             // Aquí puedes redirigir al usuario a la página correspondiente
                         }
                         else

@@ -217,6 +217,9 @@ namespace Proyecto_Final_PrograIV
 
             CargarDatosEquipos();
             CargarDatosEmpleados();
+
+            cbEquipo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbEmpleado.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void cbEquipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -250,6 +253,14 @@ namespace Proyecto_Final_PrograIV
             dgvEmpleado.DataSource = null; // Elimina cualquier origen de datos asignado al DataGridView dgvEmpleados
         }
 
+        private void dgvEquipo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvEquipo.Dock = DockStyle.Fill;
+        }
 
+        private void dgvEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dgvEmpleado.Dock = DockStyle.Fill;
+        }
     }
 }

@@ -64,29 +64,32 @@
             // dataEquipos
             // 
             this.dataEquipos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataEquipos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.dataEquipos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataEquipos.Location = new System.Drawing.Point(101, 223);
+            this.dataEquipos.Location = new System.Drawing.Point(15, 357);
             this.dataEquipos.Name = "dataEquipos";
             this.dataEquipos.ReadOnly = true;
-            this.dataEquipos.Size = new System.Drawing.Size(630, 250);
+            this.dataEquipos.Size = new System.Drawing.Size(787, 195);
             this.dataEquipos.TabIndex = 50;
             this.dataEquipos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataEquipos_CellContentClick);
             // 
             // cbTipoReporte
             // 
+            this.cbTipoReporte.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbTipoReporte.FormattingEnabled = true;
-            this.cbTipoReporte.Location = new System.Drawing.Point(79, 93);
+            this.cbTipoReporte.Location = new System.Drawing.Point(154, 106);
             this.cbTipoReporte.Name = "cbTipoReporte";
-            this.cbTipoReporte.Size = new System.Drawing.Size(196, 21);
+            this.cbTipoReporte.Size = new System.Drawing.Size(476, 33);
             this.cbTipoReporte.TabIndex = 51;
             this.cbTipoReporte.SelectedIndexChanged += new System.EventHandler(this.cbTipoReporte_SelectedIndexChanged);
             // 
             // cbTipoEquipo
             // 
+            this.cbTipoEquipo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbTipoEquipo.FormattingEnabled = true;
-            this.cbTipoEquipo.Location = new System.Drawing.Point(15, 165);
+            this.cbTipoEquipo.Location = new System.Drawing.Point(15, 202);
             this.cbTipoEquipo.Name = "cbTipoEquipo";
-            this.cbTipoEquipo.Size = new System.Drawing.Size(121, 21);
+            this.cbTipoEquipo.Size = new System.Drawing.Size(200, 33);
             this.cbTipoEquipo.TabIndex = 52;
             this.cbTipoEquipo.SelectedIndexChanged += new System.EventHandler(this.cbTipoEquipo_SelectedIndexChanged);
             // 
@@ -98,9 +101,9 @@
             this.btnRep.ForeColor = System.Drawing.Color.White;
             this.btnRep.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_documento_32;
             this.btnRep.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRep.Location = new System.Drawing.Point(285, 497);
+            this.btnRep.Location = new System.Drawing.Point(271, 282);
             this.btnRep.Name = "btnRep";
-            this.btnRep.Size = new System.Drawing.Size(225, 37);
+            this.btnRep.Size = new System.Drawing.Size(248, 49);
             this.btnRep.TabIndex = 48;
             this.btnRep.Text = "Generar Reporte";
             this.btnRep.UseVisualStyleBackColor = false;
@@ -109,9 +112,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.barraAzulBajo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 488);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 558);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(788, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(816, 65);
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
@@ -120,7 +123,7 @@
             this.pictureBox2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.Imagen2;
             this.pictureBox2.Location = new System.Drawing.Point(0, 59);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(801, 433);
+            this.pictureBox2.Size = new System.Drawing.Size(815, 501);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 47;
             this.pictureBox2.TabStop = false;
@@ -143,65 +146,75 @@
             this.pictureBox3.Image = global::Proyecto_Final_PrograIV.Properties.Resources.barraAzulBajo;
             this.pictureBox3.Location = new System.Drawing.Point(0, -1);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(788, 63);
+            this.pictureBox3.Size = new System.Drawing.Size(815, 63);
             this.pictureBox3.TabIndex = 44;
             this.pictureBox3.TabStop = false;
             // 
             // cbMarca
             // 
+            this.cbMarca.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbMarca.FormattingEnabled = true;
-            this.cbMarca.Location = new System.Drawing.Point(211, 165);
+            this.cbMarca.Location = new System.Drawing.Point(308, 202);
             this.cbMarca.Name = "cbMarca";
-            this.cbMarca.Size = new System.Drawing.Size(121, 21);
+            this.cbMarca.Size = new System.Drawing.Size(200, 33);
             this.cbMarca.TabIndex = 53;
             this.cbMarca.SelectedIndexChanged += new System.EventHandler(this.cbMarca_SelectedIndexChanged);
             // 
             // cbDepartamento
             // 
+            this.cbDepartamento.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbDepartamento.FormattingEnabled = true;
-            this.cbDepartamento.Location = new System.Drawing.Point(389, 165);
+            this.cbDepartamento.Location = new System.Drawing.Point(584, 202);
             this.cbDepartamento.Name = "cbDepartamento";
-            this.cbDepartamento.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartamento.Size = new System.Drawing.Size(200, 33);
             this.cbDepartamento.TabIndex = 54;
             this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 137);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(220)))), ((int)(((byte)(225)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label1.Location = new System.Drawing.Point(12, 174);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 15);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 55;
             this.label1.Text = "Tipo Equipo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(386, 137);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(220)))), ((int)(((byte)(225)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label2.Location = new System.Drawing.Point(581, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 15);
+            this.label2.Size = new System.Drawing.Size(145, 25);
             this.label2.TabIndex = 56;
             this.label2.Text = "Departamento:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(208, 137);
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(220)))), ((int)(((byte)(225)))));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label4.Location = new System.Drawing.Point(305, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 15);
+            this.label4.Size = new System.Drawing.Size(73, 25);
             this.label4.TabIndex = 57;
             this.label4.Text = "Marca:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 65);
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(220)))), ((int)(((byte)(225)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label5.Location = new System.Drawing.Point(279, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 15);
+            this.label5.Size = new System.Drawing.Size(266, 25);
             this.label5.TabIndex = 58;
             this.label5.Text = "Seleccione el tipo de reporte:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -210,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 546);
+            this.ClientSize = new System.Drawing.Size(814, 623);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -228,6 +241,7 @@
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RepEquipos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RepEquipos";
             this.Load += new System.EventHandler(this.RepEquipos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataEquipos)).EndInit();

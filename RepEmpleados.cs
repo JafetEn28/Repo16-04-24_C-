@@ -119,8 +119,19 @@ namespace Proyecto_Final_PrograIV
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Cierra el formulario actual de RepEmpleados
-            this.Close();
+            this.Hide(); // Oculta el formulario actual
+            ControlADM formPrincipal = Application.OpenForms.OfType<ControlADM>().FirstOrDefault(); // Obtén el formulario principal existente
+            if (formPrincipal != null) // Verifica si el formulario principal existe
+            {
+                formPrincipal.Show(); // Muestra el formulario principal
+            }
+            else
+            {
+                // Si el formulario principal no existe, puedes crear uno nuevo y mostrarlo
+                ControlADM nuevoFormPrincipal = new ControlADM();
+                nuevoFormPrincipal.FormClosed += (s, args) => this.Close(); // Cierra este formulario cuando se cierre el nuevo formulario principal
+                nuevoFormPrincipal.Show();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -134,7 +145,7 @@ namespace Proyecto_Final_PrograIV
             string query = "SELECT * FROM Empleados";
 
             // Crear una nueva conexión utilizando la cadena de conexión
-            using (SqlConnection connection = new SqlConnection("SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV;Integrated security=true"))
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra4;Integrated Security=True;"))
             {
                 // Crear un SqlDataAdapter para ejecutar la consulta y llenar un DataTable
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
@@ -173,6 +184,7 @@ namespace Proyecto_Final_PrograIV
             cbDepartamentos.Items.Add("CONTABILIDAD");
             cbDepartamentos.Items.Add("VENTAS");
             cbDepartamentos.Items.Add("MARKETING");
+
             // Deshabilitar la edición del ComboBox cbDepartamentos
             cbDepartamentos.DropDownStyle = ComboBoxStyle.DropDownList;
 
