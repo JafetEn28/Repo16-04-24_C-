@@ -13,8 +13,8 @@ namespace Proyecto_Final_PrograIV
         
             public static SqlConnection Abrir_Conexion()
             {
-                //SqlConnection conect = new SqlConnection("Server=JAFETPC;Database=FinalProgra4;Integrated Security=True;");
-                SqlConnection conect = new SqlConnection("SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true");
+                SqlConnection conect = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;");
+                //SqlConnection conect = new SqlConnection("SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true");
 
                 conect.Open();
                 return conect;

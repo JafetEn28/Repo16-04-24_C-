@@ -53,7 +53,11 @@ namespace Proyecto_Final_PrograIV
             dataSoftware.DataSource = null;
 
             // Conectar a la base de datos
+<<<<<<< Updated upstream
             string connectionString = "SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true";
+=======
+            string connectionString = "Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;";
+>>>>>>> Stashed changes
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

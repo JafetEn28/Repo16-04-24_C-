@@ -79,7 +79,10 @@
             this.cbTipoRepSoft.Name = "cbTipoRepSoft";
             this.cbTipoRepSoft.Size = new System.Drawing.Size(237, 21);
             this.cbTipoRepSoft.TabIndex = 51;
+<<<<<<< Updated upstream
             this.cbTipoRepSoft.SelectedIndexChanged += new System.EventHandler(this.cbTipoRepSoft_SelectedIndexChanged);
+=======
+>>>>>>> Stashed changes
             // 
             // cbNombreSoftware
             // 
@@ -200,7 +203,11 @@
             // cbEquipos
             // 
             this.cbEquipos.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.cbEquipos.Location = new System.Drawing.Point(315, 158);
+=======
+            this.cbEquipos.Location = new System.Drawing.Point(315, 182);
+>>>>>>> Stashed changes
             this.cbEquipos.Name = "cbEquipos";
             this.cbEquipos.Size = new System.Drawing.Size(237, 21);
             this.cbEquipos.TabIndex = 63;
