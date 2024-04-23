@@ -152,19 +152,19 @@ namespace Proyecto_Final_PrograIV
 
         private void txtPassword_Enter(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "Ejemplo123")
+            if (txtContra.Text == "Ejemplo123")
             {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = Color.DimGray;
+                txtContra.Text = "";
+                txtContra.ForeColor = Color.DimGray;
             }
         }
 
         private void txtPassword_Leave(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "")
+            if (txtContra.Text == "")
             {
-                txtPassword.Text = "Ejemplo123";
-                txtPassword.ForeColor = Color.LightGray;
+                txtContra.Text = "Ejemplo123";
+                txtContra.ForeColor = Color.LightGray;
             }
         }
 
@@ -185,87 +185,60 @@ namespace Proyecto_Final_PrograIV
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Logear(this.txtCedula.Text, this.txtPassword.Text);
+            string cedula = txtCedula.Text;
+            string contraseña = txtContra.Text;
+            string tipoUsuario = "";
 
-            /*String cedulaADM = txtCedula.Text;
-            String contraADM = txtPassword.Text;
-            string cedulaValidaADM = "1";
-            string contraValidaADM = "1";
-
-      
-
-            String cedulaTEC = txtCedula.Text;
-            String contraTEC = txtPassword.Text;
-            string cedulaValidaTEC = "2";
-            string contraValidaTEC = "2";
-
-
-            // Crear un formulario de carga
-            PantallaDeCarga pantalladeCarga = new PantallaDeCarga();
-
-            if (cedulaADM == cedulaValidaADM && contraADM == contraValidaADM)
+            // Verificar qué tipo de usuario se seleccionó
+            if (chkAdmin.Checked)
             {
-                // Mostrar formulario de carga
-                pantalladeCarga.Show();
-
-                // Configurar un temporizador para cerrar el formulario de carga después de 5 segundos
-                Timer timer = new Timer();
-                timer.Interval = 5000; // 5000 milisegundos = 5 segundos
-                timer.Tick += (s, ev) =>
-                {
-                    // Detener el temporizador
-                    timer.Stop();
-
-                    // Cerrar el formulario de carga
-                    pantalladeCarga.Close();
-
-                    // Abrir formulario de ControlADM
-                    this.Hide();
-                    ControlADM controlADM = new ControlADM();
-                    controlADM.ShowDialog();
-                    this.Close();
-                };
-                timer.Start();
+                tipoUsuario = "Admin";
             }
-            else if (cedulaTEC == cedulaValidaTEC && contraTEC == contraValidaTEC)
+            else if (chkTecnico.Checked)
             {
-                // Mostrar formulario de carga
-                pantalladeCarga.Show();
-
-                // Configurar un temporizador para cerrar el formulario de carga después de 5 segundos
-                Timer timer = new Timer();
-                timer.Interval = 5000; // 5000 milisegundos = 5 segundos
-                timer.Tick += (s, ev) =>
-                {
-                    // Detener el temporizador
-                    timer.Stop();
-
-                    // Cerrar el formulario de carga
-                    pantalladeCarga.Close();
-
-                    // Abrir formulario de MenuTecnico
-                    this.Hide();
-                    MenuTecnico menuTecnico = new MenuTecnico();
-                    menuTecnico.ShowDialog();
-                    this.Close();
-                };
-                timer.Start();
+                tipoUsuario = "Tecnico";
             }
             else
             {
-                // Cerrar el formulario de carga si las credenciales son incorrectas
-                pantalladeCarga.Close();
-
-                MessageBox.Show("Cédula o Contraseña incorrecta.\n " +
-                    "O dejo campos vacíos.\n " +
-                    "Por favor, inténtelo de nuevo.\n",
-                    "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor, seleccione el tipo de usuario.");
+                return;
             }
 
+            try
+            {
+                using (SqlConnection connection = Clase_Conexion.Abrir_Conexion())
+                {
+                    // Consulta SQL para verificar las credenciales del usuario
+                    string query = "SELECT COUNT(*) FROM Usuarios WHERE idPersona = @Cedula AND clave = @Contraseña AND tipoUsuario = @TipoUsuario";
 
-            //Form1 form1 = new Form1();
-            //form1.Show();*/
-        }
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Cedula", cedula);
+                        command.Parameters.AddWithValue("@Contraseña", contraseña);
+                        command.Parameters.AddWithValue("@TipoUsuario", tipoUsuario);
+
+                        int count = (int)command.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Inicio de sesión exitoso como " + tipoUsuario);
+
+
+                            // Aquí puedes redirigir al usuario a la página correspondiente
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cédula, tipo de usuario o contraseña incorrectos.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        
+    }
 
         private void txtCedula_TextChanged(object sender, EventArgs e)
         {
@@ -282,11 +255,11 @@ namespace Proyecto_Final_PrograIV
             if (checkBoxMostrar.Checked == true)
 
             {
-                txtPassword.UseSystemPasswordChar = false;
+                txtContra.UseSystemPasswordChar = false;
             }
             else
             {
-                txtPassword.UseSystemPasswordChar= true;
+                txtContra.UseSystemPasswordChar= true;
             }
         }
 
