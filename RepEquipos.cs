@@ -73,6 +73,18 @@ namespace Proyecto_Final_PrograIV
                     string marca = cbMarca.SelectedItem.ToString();
                     sqlQuery += $" AND marca = '{marca}'";
                 }
+
+                // Ejecutar la consulta para las opciones que no son la segunda
+                if (cbTipoReporte.SelectedIndex != 1)
+                {
+                    SqlCommand command = new SqlCommand(sqlQuery, connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Mostrar los resultados en el DataGridView
+                    dataEquipos.DataSource = dataTable;
+                }
             }
         }
 

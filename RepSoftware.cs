@@ -49,7 +49,55 @@ namespace Proyecto_Final_PrograIV
 
         private void BtnRep_Click(object sender, EventArgs e)
         {
+            // Limpiar el DataGridView antes de cargar nuevos datos
+            dataSoftware.DataSource = null;
 
+            // Conectar a la base de datos
+            string connectionString = "SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = null;
+
+                // Consulta SQL según la opción seleccionada en cbTipoRep
+                switch (cbTipoRepSoft.SelectedIndex)
+                {
+                    case 0: // REPORTE POR NOMBRE DE SOFTWARE
+                        string nombreSoftware = cbNombreSoftware.SelectedItem.ToString();
+                        string queryNombreSoftware = "SELECT * FROM Software WHERE Nombre_Software = @NombreSoftware";
+                        command = new SqlCommand(queryNombreSoftware, connection);
+                        command.Parameters.AddWithValue("@NombreSoftware", nombreSoftware);
+                        break;
+                    case 1: // REPORTE POR TIPO DE LICENCIA
+                        string tipoLicencia = cbTipoLicencia.SelectedItem.ToString();
+                        string queryTipoLicencia = "SELECT * FROM Software WHERE Tipo_Licenciamiento = @TipoLicencia";
+                        command = new SqlCommand(queryTipoLicencia, connection);
+                        command.Parameters.AddWithValue("@TipoLicencia", tipoLicencia);
+                        break;
+                    case 2: // REPORTE DE SOFTWARE POR EQUIPO
+                        string equipo = cbEquipos.SelectedItem.ToString();
+                        string queryEquipo = @"
+                    SELECT s.*
+                    FROM Software s
+                    INNER JOIN Equipos e ON s.idEquipo = e.idEquipo
+                    WHERE e.modelo = @Equipo";
+                        command = new SqlCommand(queryEquipo, connection);
+                        command.Parameters.AddWithValue("@Equipo", equipo);
+                        break;
+                    default:
+                        break;
+                }
+
+                if (command != null)
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    // Mostrar los resultados en el DataGridView
+                    dataSoftware.DataSource = dataTable;
+                }
+            }
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -57,14 +105,8 @@ namespace Proyecto_Final_PrograIV
 
         }
 
-        private void cbTipoRep_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbNombreSoftware_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void cbTipoSoft_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,19 +127,44 @@ namespace Proyecto_Final_PrograIV
         private void RepSoftware_Load(object sender, EventArgs e)
         {
             // Llenar cbTipoRep
-            cbTipoRep.Items.AddRange(new string[] { "REPORTE POR NOMBRE DE SOFTWARE", "REPORTE POR TIPO DE SOFTWARE", "REPORTE POR TIPO DE LICENCIA", "REPORTE DE SOFTWARE POR EQUIPO" });
-
-            // Llenar cbNombreSoftware
-            LlenarComboBoxDesdeBaseDeDatos("SELECT Nombre_Software FROM Software", cbNombreSoftware);
-
-            // Llenar cbTipoSoft
-            cbTipoSoft.Items.AddRange(new string[] { "Suite de Oficina", "Edición de Imágenes", "Diseño Asistido por Computadora", "Entorno de Desarrollo Integrado" });
+            cbTipoRepSoft.Items.AddRange(new string[] { "REPORTE POR NOMBRE DE SOFTWARE", "REPORTE POR TIPO DE LICENCIA", "REPORTE DE SOFTWARE POR EQUIPO" });
 
             // Llenar cbTipoLicencia
             cbTipoLicencia.Items.AddRange(new string[] { "Licencia Única", "Licencia por Volumen", "Suscripción Anual", "Licencia de Código Abierto (Open Source)" });
 
             // Llenar cbEquipos
             LlenarComboBoxDesdeBaseDeDatos("SELECT modelo FROM Equipos", cbEquipos);
+            // Llenar cbNombreSoftware
+            LlenarComboBoxDesdeBaseDeDatos("SELECT Nombre_Software FROM Software", cbNombreSoftware);
+        }
+
+        private void cbTipoRepSoft_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Deshabilitar todos los ComboBox al principio
+            cbNombreSoftware.Enabled = false;
+            cbTipoLicencia.Enabled = false;
+            cbEquipos.Enabled = false;
+
+            // Habilitar el ComboBox correspondiente según la opción seleccionada en cbTipoRep
+            switch (cbTipoRepSoft.SelectedIndex)
+            {
+                case 0: // REPORTE POR NOMBRE DE SOFTWARE
+                    cbNombreSoftware.Enabled = true;
+                    break;
+                case 1: // REPORTE POR TIPO DE LICENCIA
+                    cbTipoLicencia.Enabled = true;
+                    break;
+                case 2: // REPORTE DE SOFTWARE POR EQUIPO
+                    cbEquipos.Enabled = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void cbEquipos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

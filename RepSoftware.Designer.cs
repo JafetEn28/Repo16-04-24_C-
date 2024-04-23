@@ -30,9 +30,8 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.dataSoftware = new System.Windows.Forms.DataGridView();
-            this.cbTipoRep = new System.Windows.Forms.ComboBox();
+            this.cbTipoRepSoft = new System.Windows.Forms.ComboBox();
             this.cbNombreSoftware = new System.Windows.Forms.ComboBox();
-            this.cbTipoSoft = new System.Windows.Forms.ComboBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,14 +72,14 @@
             this.dataSoftware.TabIndex = 50;
             this.dataSoftware.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSoftware_CellContentClick);
             // 
-            // cbTipoRep
+            // cbTipoRepSoft
             // 
-            this.cbTipoRep.FormattingEnabled = true;
-            this.cbTipoRep.Location = new System.Drawing.Point(315, 71);
-            this.cbTipoRep.Name = "cbTipoRep";
-            this.cbTipoRep.Size = new System.Drawing.Size(237, 21);
-            this.cbTipoRep.TabIndex = 51;
-            this.cbTipoRep.SelectedIndexChanged += new System.EventHandler(this.cbTipoRep_SelectedIndexChanged);
+            this.cbTipoRepSoft.FormattingEnabled = true;
+            this.cbTipoRepSoft.Location = new System.Drawing.Point(315, 71);
+            this.cbTipoRepSoft.Name = "cbTipoRepSoft";
+            this.cbTipoRepSoft.Size = new System.Drawing.Size(237, 21);
+            this.cbTipoRepSoft.TabIndex = 51;
+            this.cbTipoRepSoft.SelectedIndexChanged += new System.EventHandler(this.cbTipoRepSoft_SelectedIndexChanged);
             // 
             // cbNombreSoftware
             // 
@@ -90,15 +89,6 @@
             this.cbNombreSoftware.Size = new System.Drawing.Size(237, 21);
             this.cbNombreSoftware.TabIndex = 52;
             this.cbNombreSoftware.SelectedIndexChanged += new System.EventHandler(this.cbNombreSoftware_SelectedIndexChanged);
-            // 
-            // cbTipoSoft
-            // 
-            this.cbTipoSoft.FormattingEnabled = true;
-            this.cbTipoSoft.Location = new System.Drawing.Point(315, 158);
-            this.cbTipoSoft.Name = "cbTipoSoft";
-            this.cbTipoSoft.Size = new System.Drawing.Size(237, 21);
-            this.cbTipoSoft.TabIndex = 53;
-            this.cbTipoSoft.SelectedIndexChanged += new System.EventHandler(this.cbTipoSoft_SelectedIndexChanged);
             // 
             // btnAtras
             // 
@@ -150,9 +140,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto_Final_PrograIV.Properties.Resources.Imagen2;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 40);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(857, 456);
+            this.pictureBox2.Size = new System.Drawing.Size(857, 465);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 47;
             this.pictureBox2.TabStop = false;
@@ -183,9 +173,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(312, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 15);
+            this.label2.Size = new System.Drawing.Size(55, 15);
             this.label2.TabIndex = 60;
-            this.label2.Text = "Tipo SoftWare:";
+            this.label2.Text = "Equipos:";
             // 
             // label5
             // 
@@ -210,10 +200,11 @@
             // cbEquipos
             // 
             this.cbEquipos.FormattingEnabled = true;
-            this.cbEquipos.Location = new System.Drawing.Point(316, 263);
+            this.cbEquipos.Location = new System.Drawing.Point(315, 158);
             this.cbEquipos.Name = "cbEquipos";
             this.cbEquipos.Size = new System.Drawing.Size(237, 21);
             this.cbEquipos.TabIndex = 63;
+            this.cbEquipos.SelectedIndexChanged += new System.EventHandler(this.cbEquipos_SelectedIndexChanged);
             // 
             // RepSoftware
             // 
@@ -226,9 +217,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbTipoLicencia);
-            this.Controls.Add(this.cbTipoSoft);
             this.Controls.Add(this.cbNombreSoftware);
-            this.Controls.Add(this.cbTipoRep);
+            this.Controls.Add(this.cbTipoRepSoft);
             this.Controls.Add(this.dataSoftware);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.label3);
@@ -258,9 +248,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView dataSoftware;
-        private System.Windows.Forms.ComboBox cbTipoRep;
+        private System.Windows.Forms.ComboBox cbTipoRepSoft;
         private System.Windows.Forms.ComboBox cbNombreSoftware;
-        private System.Windows.Forms.ComboBox cbTipoSoft;
         private System.Windows.Forms.ComboBox cbTipoLicencia;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
