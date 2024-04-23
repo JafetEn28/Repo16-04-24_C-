@@ -33,5 +33,10 @@ namespace Proyecto_Final_PrograIV
                 nuevoFormPrincipalTEC.Show();
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
