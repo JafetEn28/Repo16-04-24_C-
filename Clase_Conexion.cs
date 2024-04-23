@@ -13,7 +13,7 @@ namespace Proyecto_Final_PrograIV
         
             public static SqlConnection Abrir_Conexion()
             {
-                SqlConnection conect = new SqlConnection("Server=ISAAC;Database=ProyectoFinalPrograIV;Integrated Security=True;");
+                SqlConnection conect = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;");
                 conect.Open();
                 return conect;
         }   //ISAAC

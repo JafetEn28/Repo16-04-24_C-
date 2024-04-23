@@ -45,11 +45,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewUsuarios = new System.Windows.Forms.DataGridView();
             this.btnActuUser = new System.Windows.Forms.Button();
-            this.btnEditUser = new System.Windows.Forms.Button();
             this.btnEliminarUser = new System.Windows.Forms.Button();
             this.comboBoxDepar = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtIDpersona = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnGuardarUser = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -64,7 +63,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,11 +217,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dataGridViewUsuarios);
             this.groupBox1.Controls.Add(this.btnActuUser);
-            this.groupBox1.Controls.Add(this.btnEditUser);
             this.groupBox1.Controls.Add(this.btnEliminarUser);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
@@ -243,7 +239,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_conectar_32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(17, 189);
+            this.button1.Location = new System.Drawing.Point(14, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 41);
             this.button1.TabIndex = 66;
@@ -272,29 +268,13 @@
             this.btnActuUser.ForeColor = System.Drawing.Color.White;
             this.btnActuUser.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_actualizar_32;
             this.btnActuUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActuUser.Location = new System.Drawing.Point(204, 190);
+            this.btnActuUser.Location = new System.Drawing.Point(289, 189);
             this.btnActuUser.Name = "btnActuUser";
             this.btnActuUser.Size = new System.Drawing.Size(178, 41);
             this.btnActuUser.TabIndex = 63;
             this.btnActuUser.Text = "Actualizar";
             this.btnActuUser.UseVisualStyleBackColor = false;
             this.btnActuUser.Click += new System.EventHandler(this.BtnActuUser_Click);
-            // 
-            // btnEditUser
-            // 
-            this.btnEditUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(67)))), ((int)(((byte)(191)))));
-            this.btnEditUser.FlatAppearance.BorderSize = 0;
-            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditUser.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUser.ForeColor = System.Drawing.Color.White;
-            this.btnEditUser.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_ver_archivo_32;
-            this.btnEditUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditUser.Location = new System.Drawing.Point(572, 189);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(183, 41);
-            this.btnEditUser.TabIndex = 64;
-            this.btnEditUser.Text = "Buscar";
-            this.btnEditUser.UseVisualStyleBackColor = false;
             // 
             // btnEliminarUser
             // 
@@ -305,7 +285,7 @@
             this.btnEliminarUser.ForeColor = System.Drawing.Color.White;
             this.btnEliminarUser.Image = global::Proyecto_Final_PrograIV.Properties.Resources.eliminar_32;
             this.btnEliminarUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarUser.Location = new System.Drawing.Point(388, 189);
+            this.btnEliminarUser.Location = new System.Drawing.Point(573, 189);
             this.btnEliminarUser.Name = "btnEliminarUser";
             this.btnEliminarUser.Size = new System.Drawing.Size(178, 41);
             this.btnEliminarUser.TabIndex = 62;
@@ -333,18 +313,18 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.label7.Location = new System.Drawing.Point(29, 164);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 25);
+            this.label7.Size = new System.Drawing.Size(110, 25);
             this.label7.TabIndex = 68;
-            this.label7.Text = "Cedula:";
+            this.label7.Text = "Id Persona:";
             // 
-            // txtCedula
+            // txtIDpersona
             // 
-            this.txtCedula.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(33, 197);
-            this.txtCedula.Multiline = true;
-            this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(208, 34);
-            this.txtCedula.TabIndex = 69;
+            this.txtIDpersona.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDpersona.Location = new System.Drawing.Point(33, 197);
+            this.txtIDpersona.Multiline = true;
+            this.txtIDpersona.Name = "txtIDpersona";
+            this.txtIDpersona.Size = new System.Drawing.Size(208, 34);
+            this.txtIDpersona.TabIndex = 69;
             // 
             // label10
             // 
@@ -367,9 +347,9 @@
             this.btnGuardarUser.ForeColor = System.Drawing.Color.White;
             this.btnGuardarUser.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_add_bookmark_32;
             this.btnGuardarUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUser.Location = new System.Drawing.Point(300, 311);
+            this.btnGuardarUser.Location = new System.Drawing.Point(292, 296);
             this.btnGuardarUser.Name = "btnGuardarUser";
-            this.btnGuardarUser.Size = new System.Drawing.Size(239, 39);
+            this.btnGuardarUser.Size = new System.Drawing.Size(239, 41);
             this.btnGuardarUser.TabIndex = 66;
             this.btnGuardarUser.Text = "Guardar Usuario";
             this.btnGuardarUser.UseVisualStyleBackColor = false;
@@ -511,18 +491,6 @@
             this.label16.TabIndex = 77;
             this.label16.Text = "*";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(709, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 25);
-            this.label5.TabIndex = 78;
-            this.label5.Text = "*";
-            // 
             // MANUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,13 +500,13 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
+            this.Controls.Add(this.btnGuardarUser);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label_info);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtIDpersona);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnGuardarUser);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.comboBoxDepar);
             this.Controls.Add(this.groupBox1);
@@ -565,7 +533,6 @@
             this.Text = "MANUsuarios";
             this.Load += new System.EventHandler(this.MANUsuarios_Load_1);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -596,14 +563,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnEliminarUser;
         private System.Windows.Forms.Button btnActuUser;
-        private System.Windows.Forms.Button btnEditUser;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridViewUsuarios;
         private System.Windows.Forms.ComboBox comboBoxDepar;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnGuardarUser;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtIDpersona;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_info;
@@ -613,6 +579,5 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label5;
     }
 }
