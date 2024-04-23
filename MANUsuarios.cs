@@ -215,30 +215,33 @@ namespace Proyecto_Final_PrograIV
                 txtApellido1.Text = dataGridViewUsuarios.CurrentRow.Cells["apellido1"].Value.ToString();
                 txtApellido2.Text = dataGridViewUsuarios.CurrentRow.Cells["apellido2"].Value.ToString();
                 txtIDpersona.Text = dataGridViewUsuarios.CurrentRow.Cells["idPersona"].Value.ToString();
-                txtClave.Text = dataGridViewUsuarios.CurrentRow.Cells["clave"].Value.ToString(); // Esto podría requerir manejo especial para evitar NullReferenceException
+                txtClave.Text = dataGridViewUsuarios.CurrentRow.Cells["clave"].Value.ToString();
+
+                // Habilitar la edición de los ComboBox
+                comboBoxPuesto.Enabled = true;
+                comboBoxDepar.Enabled = true;
 
                 // Obtener el valor de puesto y departamento de la fila
                 string puesto = dataGridViewUsuarios.CurrentRow.Cells["puesto"].Value?.ToString();
                 string departamento = dataGridViewUsuarios.CurrentRow.Cells["departamento"].Value?.ToString();
 
-                // Limpiar los ComboBox
-                comboBoxPuesto.Items.Clear();
-                comboBoxDepar.Items.Clear();
+                // Limpiar y cargar los ComboBox
+                ActualizarComboBoxPuesto();
+                ActualizarComboBoxDepartamento();
 
-                // Agregar el valor correspondiente a los ComboBox
+                // Seleccionar el valor correspondiente en los ComboBox
                 if (!string.IsNullOrEmpty(puesto))
                 {
-                    comboBoxPuesto.Items.Add(puesto);
                     comboBoxPuesto.SelectedItem = puesto;
                 }
 
                 if (!string.IsNullOrEmpty(departamento))
                 {
-                    comboBoxDepar.Items.Add(departamento);
                     comboBoxDepar.SelectedItem = departamento;
                 }
             }
         }
+
 
 
 
@@ -279,11 +282,17 @@ namespace Proyecto_Final_PrograIV
 
 
         private void MANUsuarios_Load_1(object sender, EventArgs e)
-        {          
-            
-            // Establecer el estilo del ComboBox de puesto para que no permita la edición directa
+        {
+
+            // Establecer el estilo del ComboBox de puesto y departamento para que no permita la edición directa
             comboBoxPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxDepar.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            // Cargar opciones de puesto
+            ActualizarComboBoxPuesto();
+
+            // Cargar opciones de departamento
+            ActualizarComboBoxDepartamento();
         }
 
 
@@ -375,12 +384,7 @@ namespace Proyecto_Final_PrograIV
                 string nombre = txtNombre.Text;
                 string apellido1 = txtApellido1.Text;
                 string apellido2 = txtApellido2.Text;
-                int idPersona;
-                if (!int.TryParse(txtIDpersona.Text, out idPersona))
-                {
-                    MessageBox.Show("El ID de persona debe ser un número entero.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                int idPersona = Convert.ToInt32(txtIDpersona.Text);
                 string puesto = comboBoxPuesto.SelectedItem?.ToString();
                 string departamento = comboBoxDepar.SelectedItem?.ToString();
                 string clave = txtClave.Text;
@@ -399,11 +403,8 @@ namespace Proyecto_Final_PrograIV
                 // Deshabilitar el botón mientras se procesa la información
                 btnActuUser.Enabled = false;
 
-                // Obtener el ID de la persona seleccionada
-                int idPersonaSeleccionada = Convert.ToInt32(dataGridViewUsuarios.SelectedRows[0].Cells["idPersona"].Value);
-
                 // Actualizar los datos en la base de datos
-                ActualizarUsuario(idPersonaSeleccionada, nombre, apellido1, apellido2, puesto, departamento, clave);
+                await ActualizarUsuario(idPersona, nombre, apellido1, apellido2, puesto, departamento, clave);
 
                 // Mostrar un mensaje de éxito
                 MessageBox.Show("Usuario actualizado correctamente.");
@@ -413,6 +414,12 @@ namespace Proyecto_Final_PrograIV
 
                 // Volver a cargar los usuarios en el DataGridView
                 CargarUsuarios();
+
+                // Volver a cargar los datos en los ComboBox
+                ActualizarComboBoxPuesto();
+                ActualizarComboBoxDepartamento();
+
+                Refresh();
             }
             catch (Exception ex)
             {
@@ -425,25 +432,25 @@ namespace Proyecto_Final_PrograIV
             }
         }
 
-        private void ActualizarUsuario(int idPersona, string nombre, string apellido1, string apellido2, string puesto, string departamento, string clave)
+        private async Task ActualizarUsuario(int idPersona, string nombre, string apellido1, string apellido2, string puesto, string departamento, string clave)
         {
-            try
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
             {
-                using (SqlConnection conexion = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
-                {
-                    conexion.Open();
-                    // Aquí debes ejecutar el comando SQL para actualizar los datos del usuario en la base de datos
-                    SqlCommand cmd = new SqlCommand("UPDATE Personas SET nombre = @nombre, apellido1 = @apellido1, apellido2 = @apellido2 WHERE idPersona = @idPersona;", conexion);
-                    cmd.Parameters.AddWithValue("@nombre", nombre);
-                    cmd.Parameters.AddWithValue("@apellido1", apellido1);
-                    cmd.Parameters.AddWithValue("@apellido2", apellido2);
-                    cmd.Parameters.AddWithValue("@idPersona", idPersona);
-                    cmd.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error al actualizar el usuario en la base de datos: {ex.Message}");
+                await connection.OpenAsync();
+
+                string query = "UPDATE Personas SET nombre = @nombre, apellido1 = @apellido1, apellido2 = @apellido2 WHERE idPersona = @idPersona;" +
+                               "UPDATE Empleados SET puesto = @puesto, departamento = @departamento WHERE idPersona = @idPersona;" +
+                               "UPDATE Usuarios SET clave = @clave WHERE idPersona = @idPersona;";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", nombre);
+                command.Parameters.AddWithValue("@apellido1", apellido1);
+                command.Parameters.AddWithValue("@apellido2", apellido2);
+                command.Parameters.AddWithValue("@idPersona", idPersona);
+                command.Parameters.AddWithValue("@clave", clave);
+                command.Parameters.AddWithValue("@puesto", puesto);
+                command.Parameters.AddWithValue("@departamento", departamento);
+                await command.ExecuteNonQueryAsync();
             }
         }
 
