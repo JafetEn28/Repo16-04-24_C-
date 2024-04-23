@@ -77,9 +77,9 @@
             // 
             this.cbTipoRepSoft.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.cbTipoRepSoft.FormattingEnabled = true;
-            this.cbTipoRepSoft.Location = new System.Drawing.Point(270, 108);
+            this.cbTipoRepSoft.Location = new System.Drawing.Point(187, 108);
             this.cbTipoRepSoft.Name = "cbTipoRepSoft";
-            this.cbTipoRepSoft.Size = new System.Drawing.Size(261, 33);
+            this.cbTipoRepSoft.Size = new System.Drawing.Size(417, 33);
             this.cbTipoRepSoft.TabIndex = 51;
             this.cbTipoRepSoft.SelectedIndexChanged += new System.EventHandler(this.cbTipoRepSoft_SelectedIndexChanged);
             // 

@@ -51,7 +51,7 @@ namespace Proyecto_Final_PrograIV
             }
 
             // Crear una nueva conexión utilizando la cadena de conexión
-            using (SqlConnection connection = new SqlConnection("SERVER = CRISTOPHERBV\\MSSQLSERVER01; DATABASE = ProyectoFinalPrograIV; Integrated security = true"))
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;"))
             {
                 // Crear un SqlDataAdapter para ejecutar la consulta y llenar un DataTable
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);

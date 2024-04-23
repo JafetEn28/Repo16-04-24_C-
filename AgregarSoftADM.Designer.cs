@@ -42,9 +42,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.GuardarSoft = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtIdSoftware = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -203,20 +203,21 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // GuardarSoft
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(67)))), ((int)(((byte)(191)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_add_bookmark_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(292, 414);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 46);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.GuardarSoft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(67)))), ((int)(((byte)(191)))));
+            this.GuardarSoft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GuardarSoft.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarSoft.ForeColor = System.Drawing.Color.White;
+            this.GuardarSoft.Image = global::Proyecto_Final_PrograIV.Properties.Resources.icons8_add_bookmark_32;
+            this.GuardarSoft.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GuardarSoft.Location = new System.Drawing.Point(292, 414);
+            this.GuardarSoft.Name = "GuardarSoft";
+            this.GuardarSoft.Size = new System.Drawing.Size(182, 46);
+            this.GuardarSoft.TabIndex = 34;
+            this.GuardarSoft.Text = "Guardar";
+            this.GuardarSoft.UseVisualStyleBackColor = false;
+            this.GuardarSoft.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
@@ -230,14 +231,14 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "Id del Software:";
             // 
-            // textBox5
+            // txtIdSoftware
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(54, 132);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(284, 34);
-            this.textBox5.TabIndex = 36;
+            this.txtIdSoftware.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdSoftware.Location = new System.Drawing.Point(54, 132);
+            this.txtIdSoftware.Multiline = true;
+            this.txtIdSoftware.Name = "txtIdSoftware";
+            this.txtIdSoftware.Size = new System.Drawing.Size(284, 34);
+            this.txtIdSoftware.TabIndex = 36;
             // 
             // textBox6
             // 
@@ -264,9 +265,9 @@
             this.ClientSize = new System.Drawing.Size(814, 623);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtIdSoftware);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.GuardarSoft);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox1);
@@ -310,9 +311,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button GuardarSoft;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtIdSoftware;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
     }

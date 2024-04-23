@@ -15,7 +15,7 @@ namespace Proyecto_Final_PrograIV
     public partial class MANUsuarios : Form
     {
 
-        SqlConnection conexion = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;");
+        SqlConnection conexion = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;");
         public MANUsuarios()
         {
             InitializeComponent();
@@ -85,7 +85,7 @@ namespace Proyecto_Final_PrograIV
                     return;
                 }
 
-                using (SqlConnection conexion = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
+                using (SqlConnection conexion = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;"))
                 {
                     conexion.Open();
 
@@ -334,7 +334,7 @@ namespace Proyecto_Final_PrograIV
                                                   "DELETE FROM Personas WHERE idPersona = @idPersona;";
 
                     // Establecer la conexión y ejecutar la consulta
-                    using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
+                    using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;"))
                     {
                         connection.Open();
                         SqlCommand cmd = new SqlCommand(eliminarUsuarioQuery, connection);
@@ -434,7 +434,7 @@ namespace Proyecto_Final_PrograIV
 
         private async Task ActualizarUsuario(int idPersona, string nombre, string apellido1, string apellido2, string puesto, string departamento, string clave)
         {
-            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;"))
             {
                 await connection.OpenAsync();
 

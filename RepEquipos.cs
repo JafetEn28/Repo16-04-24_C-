@@ -30,7 +30,7 @@ namespace Proyecto_Final_PrograIV
             dataEquipos.DataSource = null;
 
             // Conectar a la base de datos
-            string connectionString = "Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;";
+            string connectionString = "Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

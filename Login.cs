@@ -47,51 +47,11 @@ namespace Proyecto_Final_PrograIV
 
                     if (dt.Rows[0]["tipoUsuario"].ToString() == "Admin")
                     {
-                        // Mostrar formulario de carga
-                        pantalladeCarga.Show();
-
-                        // Configurar un temporizador para cerrar el formulario de carga después de 5 segundos
-                        Timer timer = new Timer();
-                        timer.Interval = 2000; // 5000 milisegundos = 5 segundos
-                        timer.Tick += (s, ev) =>
-                        {
-                            // Detener el temporizador
-                            timer.Stop();
-
-                            // Cerrar el formulario de carga
-                            pantalladeCarga.Close();
-
-                            // Abrir formulario de ControlADM
-                            this.Hide();
-                            ControlADM controlADM = new ControlADM();
-                            controlADM.ShowDialog();
-                            this.Close();
-                        };
-                        timer.Start();
+                        AbrirFormularioControlADM();
                     }
                     else if (dt.Rows[0]["tipoUsuario"].ToString() == "Tecnico")
                     {
-                        // Mostrar formulario de carga
-                        pantalladeCarga.Show();
-
-                        // Configurar un temporizador para cerrar el formulario de carga después de 5 segundos
-                        Timer timer = new Timer();
-                        timer.Interval = 2000; // 5000 milisegundos = 5 segundos
-                        timer.Tick += (s, ev) =>
-                        {
-                            // Detener el temporizador
-                            timer.Stop();
-
-                            // Cerrar el formulario de carga
-                            pantalladeCarga.Close();
-
-                            // Abrir formulario de MenuTecnico
-                            this.Hide();
-                            MenuTecnico menuTecnico = new MenuTecnico();
-                            menuTecnico.ShowDialog();
-                            this.Close();
-                        };
-                        timer.Start();
+                        AbrirFormularioMenuTecnico();
                     }
                 }
                 else
@@ -108,15 +68,64 @@ namespace Proyecto_Final_PrograIV
             {
                 con.Close();
             }
-        } 
-        /*private void txtCedula_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (txtCedula.Text == "Digite su Cedula")
-            {
-                txtCedula.Text = "";
-            }
-        }*/
+        }
 
+        private void AbrirFormularioControlADM()
+        {
+            // Crear un formulario de carga
+            PantallaDeCarga pantalladeCarga = new PantallaDeCarga();
+
+            // Mostrar formulario de carga
+            pantalladeCarga.Show();
+
+            // Configurar un temporizador para cerrar el formulario de carga después de 5 segundos
+            Timer timer = new Timer();
+            timer.Interval = 2000; // 5000 milisegundos = 5 segundos
+            timer.Tick += (s, ev) =>
+            {
+                // Detener el temporizador
+                timer.Stop();
+
+                // Cerrar el formulario de carga
+                pantalladeCarga.Close();
+
+                // Abrir formulario de ControlADM
+                this.Hide();
+                ControlADM controlADM = new ControlADM();
+                controlADM.ShowDialog();
+                this.Close();
+            };
+            timer.Start();
+        }
+
+
+        private void AbrirFormularioMenuTecnico()
+        {
+            // Crear un formulario de carga
+            PantallaDeCarga pantalladeCarga = new PantallaDeCarga();
+
+            // Mostrar formulario de carga
+            pantalladeCarga.Show();
+
+            // Configurar un temporizador para cerrar el formulario de carga después de 5 segundos
+            Timer timer = new Timer();
+            timer.Interval = 2000; // 5000 milisegundos = 5 segundos
+            timer.Tick += (s, ev) =>
+            {
+                // Detener el temporizador
+                timer.Stop();
+
+                // Cerrar el formulario de carga
+                pantalladeCarga.Close();
+
+                // Abrir formulario de MenuTecnico
+                this.Hide();
+                MenuTecnico menuTecnico = new MenuTecnico();
+                menuTecnico.ShowDialog();
+                this.Close();
+            };
+            timer.Start();
+        }
 
 
         //CARGA DEL LOAD
@@ -132,7 +141,7 @@ namespace Proyecto_Final_PrograIV
 
 
 
-            private void txtCedula_Enter(object sender, EventArgs e)
+        private void txtCedula_Enter(object sender, EventArgs e)
         {
             if (txtCedula.Text == "Digite su cédula")
             {
@@ -168,20 +177,6 @@ namespace Proyecto_Final_PrograIV
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -223,8 +218,15 @@ namespace Proyecto_Final_PrograIV
                         {
                             MessageBox.Show("Inicio de sesión exitoso como " + tipoUsuario);
 
-                            
-                            // Aquí puedes redirigir al usuario a la página correspondiente
+                            // Abrir el formulario correspondiente
+                            if (tipoUsuario == "Admin")
+                            {
+                                AbrirFormularioControlADM();
+                            }
+                            else if (tipoUsuario == "Tecnico")
+                            {
+                                AbrirFormularioMenuTecnico();
+                            }
                         }
                         else
                         {
@@ -237,13 +239,9 @@ namespace Proyecto_Final_PrograIV
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-        
-    }
-
-        private void txtCedula_TextChanged(object sender, EventArgs e)
-        {
 
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -265,7 +263,7 @@ namespace Proyecto_Final_PrograIV
 
         private void chkAdmin_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkAdmin.Checked)
+            if (chkAdmin.Checked)
             {
 
                 chkTecnico.Checked = false;
@@ -286,9 +284,9 @@ namespace Proyecto_Final_PrograIV
 }
 
 
-    
 
 
 
 
-    
+
+

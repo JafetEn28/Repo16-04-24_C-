@@ -19,7 +19,7 @@ namespace Proyecto_Final_PrograIV
         }
         private void LlenarComboBoxDesdeBaseDeDatos(string query, ComboBox comboBox)
         {
-            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalPrograIV;Integrated Security=True;"))
+            using (SqlConnection connection = new SqlConnection("Server=JAFETPC;Database=ProyectoFinalProgra44;Integrated Security=True;"))
             {
                 try
                 {
